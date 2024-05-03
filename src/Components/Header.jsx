@@ -5,6 +5,7 @@ import { GrDevice } from "react-icons/gr";
 import { useState } from "react";
 import { useLogout } from "../Hooks/useLogout";
 import { useAuth } from "../Hooks/useAuthentication";
+import logo from "../images/logo.svg";
 
 export const Header = () => {
   const { auth } = useAuth();
@@ -31,7 +32,7 @@ export const Header = () => {
   return (
     <nav className="fixed left-0 top-0  z-50  w-full md:left-10 md:top-3 lg:left-8 lg:top-12 lg:max-w-20">
       <div className=" flex h-24  items-center justify-between bg-app-light p-4  md:w-11/12 md:rounded-lg  lg:mx-6 lg:h-[80vh]  lg:w-24 lg:flex-col lg:items-center">
-        <img src="/logo.svg" alt="logo" />
+        <img src={logo} alt="logo" />
         <div className="flex gap-4 md:gap-8 lg:flex-col">
           <NavLink to="/">
             <button className={classes("home")}>

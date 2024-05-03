@@ -61,7 +61,6 @@ export const InfoComponent = ({ details }) => {
               </>
             )}
           </div>
-
           <div className="mb-4 grid grid-cols-1 gap-2 text-base md:grid-cols-4 lg:gap-6">
             {details.type === "Movie" && (
               <>

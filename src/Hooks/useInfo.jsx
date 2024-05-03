@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "../Features/ApiCall";
+import axios from "../Features/ApiCall.js";
 
 // A specialized hook designed to retrieve information about the present page.
 
@@ -19,6 +19,7 @@ export const useInfo = (pathname) => {
       try {
         const response = await axios.get(pathname);
         const data = await response.data;
+
         const urls = (await axios.get(`/${media}/urls/${id}`)).data;
         setIsLoading(false);
         setDetails({ ...data, urls });

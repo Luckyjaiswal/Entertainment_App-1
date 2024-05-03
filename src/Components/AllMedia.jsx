@@ -12,6 +12,7 @@ export const AllMedia = ({ error, data }) => {
       ? (item.releaseDate && item.releaseDate.split("-")[0]) || "N/A"
       : (item.firstAirDate && item.firstAirDate.split("-")[0]) || "N/A";
   };
+
   return (
     <>
       {error ? (

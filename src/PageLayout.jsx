@@ -1,5 +1,5 @@
 import { Bounce, ToastContainer } from "react-toastify";
-
+import "react-toastify/dist/ReactToastify.css";
 import { Header } from "./Components/Header";
 import { useFetchBookmark } from "./Hooks/usefetchBookmark";
 import { useFetchBookmarksbyID } from "./Hooks/usefetchBookmarksbyID";

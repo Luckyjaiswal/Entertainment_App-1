@@ -6,6 +6,7 @@ import Resizer from "react-image-file-resizer";
 import { useRef, useState } from "react";
 import { Errors } from "../Components/Erros";
 import { ValidationRegisteration } from "../Features/ValidationRegisteration";
+import logo from "../images/logo.svg";
 
 export const RegistrationPage = () => {
   const imageRef = useRef(null);
@@ -74,7 +75,7 @@ export const RegistrationPage = () => {
 
   return (
     <main className="flex h-screen w-full flex-col items-center justify-center gap-20 ">
-      <img src="/logo.svg" alt="logo" className="mt-20 h-10 w-12 md:mt-0" />
+      <img src={logo} alt="logo" className="mt-20 h-10 w-12 md:mt-0" />
       <div className="w-72 rounded-lg bg-app-light p-6 sm:w-96">
         <h2 className="mb-4 text-2xl font-light">
           {success ? "Success" : "Sign Up"}
@@ -190,7 +191,7 @@ export const RegistrationPage = () => {
             <div tabIndex={4} className="flex flex-col gap-2">
               <label htmlFor="profileImage" className="flex items-center gap-4">
                 {
-                  <span className="tex-sm w-1/2 cursor-pointer rounded-md border-2 border-app-red p-2 text-app-red  sm:w-fit">
+                  <span className="text-sm w-1/2 cursor-pointer rounded-md border-2 border-app-red p-2 text-app-red  sm:w-fit">
                     {values.profileImage ? "Change" : "Upload"} Image
                   </span>
                 }
@@ -198,7 +199,7 @@ export const RegistrationPage = () => {
                   {values.profileImage && (
                     <img
                       src={values.profileImage}
-                      className="w-full translate-y-1/4 object-cover"
+                      className="w-1/2 sm:w-3/4 rounded-full translate-y-1/4 object-cover"
                       alt="Profile Image"
                     />
                   )}

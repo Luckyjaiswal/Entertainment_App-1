@@ -6,6 +6,7 @@ import { useAuth } from "../Hooks/useAuthentication";
 import { ValidationLogin } from "../Features/ValidationLogin";
 import { Errors } from "../Components/Erros";
 import logo from "../images/logo.svg";
+import "react-toastify/dist/ReactToastify.css";
 
 export const LoginPage = () => {
   const { setAuth } = useAuth();
@@ -41,6 +42,7 @@ export const LoginPage = () => {
           // if error occurs
           const errorMessage = err.response.data.message;
           toast.error(errorMessage);
+
           if (errorMessage.search(/email/gi) !== -1) {
             resetForm({ values: { email: "", password: "" } });
           } else if (errorMessage.search(/password/gi) !== -1) {
@@ -155,7 +157,7 @@ export const LoginPage = () => {
       <ToastContainer
         position="top-right"
         autoClose={5000}
-        theme="dark"
+        theme="colored"
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
