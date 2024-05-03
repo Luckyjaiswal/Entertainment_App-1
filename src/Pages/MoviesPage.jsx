@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import axios from "../Features/ApiCall";
+import axios from "../Features/ApiCall.js";
 import { setMovies } from "../redux/Slice/MoviesSlice";
 import { PageLayout } from "../PageLayout";
 import { SearchTab } from "../Components/SearchTab";
@@ -36,10 +36,8 @@ export const MoviesPage = () => {
 
       try {
         const response = await axios.get(`/movies?page=${currentPageNumber}`);
-        const data = response.data;
-
-        dispatch(setMovies(data.movies));
-
+        const data = await response.data;
+        dispatch(setMovies(data.allmovies));
         setTotalPages(data.totalPages);
         setMovieIsLoading(false);
       } catch (err) {

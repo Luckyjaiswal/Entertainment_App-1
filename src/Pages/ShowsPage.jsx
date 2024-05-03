@@ -31,7 +31,6 @@ export const ShowsPage = () => {
   useEffect(() => {
     const getMoviesAndPopulateRedux = async () => {
       setTvShowIsLoading(true);
-
       setTvShowError("");
 
       try {

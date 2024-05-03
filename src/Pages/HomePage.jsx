@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { setRecommended } from "../redux/Slice/RecommendSlice";
 import { useEffect, useState } from "react";
 import { setTrending } from "../redux/Slice/TrendingShowsslice";
-import axios from "../Features/ApiCall";
+import axios from "../Features/ApiCall.js";
 import { SearchTab } from "../Components/SearchTab";
 import { ResultofSearch } from "../Components/ResultofSearch";
 import { useFind } from "../Hooks/useFind";
@@ -21,28 +21,32 @@ export const HomePage = () => {
   useEffect(() => {
     const movieOrTvArray = ["movies", "tvShows"];
     const selectMovieOrTv = Math.floor(Math.random() * 2);
-
     const randomPage =
       Math.floor(Math.random() * (selectMovieOrTv === 1 ? 1451 : 946)) + 1;
 
     const getRecommendedMovieOrTvShowAndPopulateRedux = async () => {
       const movieOrTv = movieOrTvArray[selectMovieOrTv];
-      const response = await axios.get(`/${movieOrTv}?page=${randomPage}`);
+      const URL = `/${movieOrTv}?page=${randomPage}`;
+      const response = await axios.get(URL);
       const data = response.data;
-
-      dispatch(setRecommended({ type: movieOrTv, data: data[`${movieOrTv}`] }));
+      dispatch(
+        setRecommended({
+          type: movieOrTv,
+          data: data.allmovies ? data.allmovies : data.tvShows,
+        })
+      );
     };
 
     const getTrendingAndPopulateRedux = async () => {
       const response = await axios.get("/trending");
-      const data = response.data;
-
+      const data = await response.data;
       dispatch(setTrending(data.trendingItems));
     };
 
     getRecommendedMovieOrTvShowAndPopulateRedux();
     getTrendingAndPopulateRedux();
   }, []);
+
   return (
     <PageLayout>
       <SearchTab
