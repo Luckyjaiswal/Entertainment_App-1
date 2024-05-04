@@ -19,9 +19,18 @@ This is an Entertainment App project built with ReactJS, Tailwind CSS, and Axios
   ```
   git clone https://github.com/HimanshuKumawat13051997/Entertainment_App.git
   ```
-- Navigate to the project directory: `cd Entertainment_App`
-- Install dependencies: `npm install`
-- Start the development server: `npm start`
+- Navigate to the project directory:
+  ```
+  cd Entertainment_App
+  ```
+- Install dependencies:
+  ```
+  `npm install`
+  ```
+- Start the development server:
+  ```
+  `npm start`
+  ```
 - Open your browser and visit `http://localhost:3000` to view the app.
 
 ## Contributing
