@@ -15,7 +15,8 @@ This is an Entertainment App project built with ReactJS, Tailwind CSS, and Axios
 - **Axios**: A promise-based HTTP client for making HTTP requests.
 
 ## Setup Instructions
-- Clone the repository: ```
+- Clone the repository:
+  ```
   git clone https://github.com/HimanshuKumawat13051997/Entertainment_App.git
   ```
 - Navigate to the project directory: `cd Entertainment_App`
