@@ -41,9 +41,7 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 4. Push to the branch: `git push origin feature-name`
 5. Submit a pull request.
 
-## License
-This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
-If you have any questions or suggestions, feel free to contact the project maintainer at [your-email@example.com].
+If you have any questions or suggestions, feel free to contact the project maintainer at himanshukumawat13051997@gmail.com
 
