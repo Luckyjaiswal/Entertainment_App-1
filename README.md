@@ -30,7 +30,8 @@ This is an Entertainment App project built with ReactJS, Tailwind CSS, and Axios
 - Start the development server:
   ```
   `npm start`
-  ```
+  ```git log --reverse
+
 - Open your browser and visit `http://localhost:3000` to view the app.
 
 ## Contributing
