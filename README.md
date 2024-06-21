@@ -16,9 +16,8 @@ This is an Entertainment App project built with ReactJS, Tailwind CSS, and Axios
 
 ## Setup Instructions
 - Clone the repository:
-  ```
-  git clone https://github.com/HimanshuKumawat13051997/Entertainment_App.git
-  ```
+  ``
+  https://github.com/Luckyjaiswal/Entertainment_App-1.git
 - Navigate to the project directory:
   ```
   cd Entertainment_App
@@ -44,5 +43,5 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 
 
 ## Contact
-If you have any questions or suggestions, feel free to contact the project maintainer at himanshukumawat13051997@gmail.com
+If you have any questions or suggestions, feel free to contact the project maintainer at jaiswallucky264@gmail.com
 
